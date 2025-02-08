@@ -48,3 +48,70 @@
     </div>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 36px;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .btn-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .btn {
+            padding: 15px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .math { background: #4CAF50; color: white; }
+        .ict { background: #2196F3; color: white; }
+        .physics { background: #FF9800; color: white; }
+        .chemistry { background: #9C27B0; color: white; }
+        .btn:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>📚 My Study Dashboard</h1>
+
+    <div class="container">
+        <p>Select a subject to start learning:</p>
+        <div class="btn-container">
+            <a href="mathematics.html" class="btn math">📘 Mathematics</a>
+            <a href="ict.html" class="btn ict">💻 ICT</a>
+            <a href="physics.html" class="btn physics">🔬 Physics</a>
+            <a href="chemistry.html" class="btn chemistry">🧪 Chemistry</a>
+        </div>
+    </div>
+
+</body>
+</html>
