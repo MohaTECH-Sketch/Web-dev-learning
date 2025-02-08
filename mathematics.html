@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Algebra</title>
+    <title>Mathematics Notes</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,14 +14,10 @@
         h1, h2 {
             text-align: center;
         }
-        p {
-            font-size: 20px;
-        }
-        img {
-            display: block;
-            margin: 20px auto;
-            width: 80%;
-            max-width: 500px;
+        .section {
+            border-bottom: 2px solid #000;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
         }
         .formula {
             background: #f4f4f4;
@@ -40,48 +36,83 @@
     </style>
 </head>
 <body>
-    <h1>📐 Algebra</h1>
 
-    <h2>1. Introduction</h2>
-    <p>Algebra is a branch of mathematics dealing with symbols and rules for manipulating those symbols. It forms the foundation of higher mathematics and is essential in problem-solving.</p>
+    <h1>📘 Mathematics Notes</h1>
 
-    <h2>2. Key Concepts</h2>
+    <h2>Table of Contents</h2>
     <ul>
-        <li><strong>Variables:</strong> Symbols (like x, y) representing numbers.</li>
-        <li><strong>Expressions:</strong> Combinations of variables and numbers (e.g., 2x + 5).</li>
-        <li><strong>Equations:</strong> Statements showing two expressions are equal (e.g., 2x + 5 = 10).</li>
+        <li><a href="#numbers">Numbers & Operations</a></li>
+        <li><a href="#algebra">Algebra</a></li>
+        <li><a href="#graphs">Graphs & Functions</a></li>
+        <li><a href="#trigonometry">Trigonometry</a></li>
+        <li><a href="#differentiation">Differentiation</a></li>
+        <li><a href="#integration">Integration</a></li>
+        <li><a href="#exponentials">Exponentials & Logarithms</a></li>
+        <li><a href="#vectors">Vectors</a></li>
     </ul>
 
-    <h2>3. Formulas</h2>
-    <div class="formula">
-        Linear Equation: ax + b = 0 <br>
-        Quadratic Equation: ax² + bx + c = 0 <br>
-        Slope of a Line: m = (y₂ - y₁) / (x₂ - x₁)
+    <div id="numbers" class="section">
+        <h2>🔢 Numbers & Operations</h2>
+        <p>Understanding different types of numbers:</p>
+        <ul>
+            <li><strong>Natural Numbers (N):</strong> {1, 2, 3, ...}</li>
+            <li><strong>Integers (Z):</strong> {..., -3, -2, -1, 0, 1, 2, ...}</li>
+            <li><strong>Rational Numbers (Q):</strong> Numbers that can be written as fractions.</li>
+        </ul>
+        <h3>Formula</h3>
+        <p class="formula">n! = n × (n-1) × (n-2) × ... × 1</p>
     </div>
 
-    <h2>4. Example Problems</h2>
-    <p><strong>Example 1:</strong> Solve for x in 2x + 5 = 15.</p>
-    <div class="formula">
-        2x = 15 - 5 <br>
-        2x = 10 <br>
-        x = 10 / 2 = 5
+    <div id="algebra" class="section">
+        <h2>➗ Algebra</h2>
+        <p>Basic operations on algebraic expressions.</p>
+        <h3>Formula</h3>
+        <p class="formula">(a + b)² = a² + 2ab + b²</p>
     </div>
 
-    <p><strong>Example 2:</strong> Find the slope of a line passing through (2,3) and (6,7).</p>
-    <div class="formula">
-        m = (7 - 3) / (6 - 2) = 4 / 4 = 1
+    <div id="graphs" class="section">
+        <h2>📈 Graphs & Functions</h2>
+        <p>Linear and quadratic graphs, transformations.</p>
+        <h3>Formula</h3>
+        <p class="formula">y = mx + c</p>
     </div>
 
-    <h2>5. Root Concept</h2>
-    <p>The roots of algebra trace back to **al-Khwarizmi**, a Persian mathematician whose book "Al-Kitab al-Mukhtasar fi Hisab al-Jabr wal-Muqabala" introduced algebra to the world.</p>
+    <div id="trigonometry" class="section">
+        <h2>📐 Trigonometry</h2>
+        <p>Sine, cosine, and tangent rules.</p>
+        <h3>Formula</h3>
+        <p class="formula">sin²θ + cos²θ = 1</p>
+    </div>
 
-    <h2>6. Imitative Explanation</h2>
-    <p>Think of algebra as a **puzzle** where you find missing numbers. If you have `2x + 5 = 15`, you're solving for `x` just like finding a missing piece in a jigsaw puzzle.</p>
+    <div id="differentiation" class="section">
+        <h2>📊 Differentiation</h2>
+        <p>Finding gradients of functions.</p>
+        <h3>Formula</h3>
+        <p class="formula">d/dx [xⁿ] = nxⁿ⁻¹</p>
+    </div>
 
-    <h2>Download Notes</h2>
-    <a href="algebra-notes.pdf" download>📄 Download Full Algebra Notes (PDF)</a>
+    <div id="integration" class="section">
+        <h2>📏 Integration</h2>
+        <p>Finding areas under curves.</p>
+        <h3>Formula</h3>
+        <p class="formula">∫ xⁿ dx = (xⁿ⁺¹)/(n+1) + C</p>
+    </div>
 
-    <a href="../mathematics.html">⬅ Back to Mathematics</a>
-    <a href="../index.html">🏠 Back to Home</a>
+    <div id="exponentials" class="section">
+        <h2>📊 Exponentials & Logarithms</h2>
+        <p>Understanding exponential functions and logarithms.</p>
+        <h3>Formula</h3>
+        <p class="formula">logₐ(xy) = logₐx + logₐy</p>
+    </div>
+
+    <div id="vectors" class="section">
+        <h2>📍 Vectors</h2>
+        <p>Vector addition, magnitude, and direction.</p>
+        <h3>Formula</h3>
+        <p class="formula">|a| = √(x² + y² + z²)</p>
+    </div>
+
+    <a href="index.html">🏠 Back to Home</a>
+
 </body>
 </html>
