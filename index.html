@@ -51,6 +51,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Study Dashboard</title>
     <style>
+        <script>
+  firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+      // If user is already logged in, send them to the dashboard
+      window.location.href = "dashboard.html";
+    }
+  });
+</script>
         body { font-family: Arial, sans-serif; margin: 20px; padding: 20px; background-color: #f4f4f4; }
         .container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 8px; }
         h1 { text-align: center; }
