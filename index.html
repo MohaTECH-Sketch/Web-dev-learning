@@ -46,8 +46,12 @@
     <!DOCTYPE html>
 <html lang="en">
 <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Notes - Dark Mode</title>
     <style>
         /* Default Light Mode */
         body {
@@ -59,10 +63,20 @@
             padding: 20px;
         }
 
+        h1, p {
+            color: #000000; /* Default dark text for light mode */
+            transition: color 0.3s;
+        }
+
         /* Dark Mode */
         .dark-mode {
             background-color: #121212;
             color: #ffffff;
+        }
+
+        .dark-mode h1, 
+        .dark-mode p {
+            color: #ffffff; /* White text in dark mode */
         }
 
         /* Button Styling */
@@ -81,6 +95,35 @@
         }
     </style>
 </head>
+<body>
+
+    <h1>Edexcel Math Notes</h1>
+    <p>Welcome to the mathematics notes!</p>
+
+    <button id="toggle-dark-mode">Toggle Dark Mode</button>
+
+    <script>
+        const toggleButton = document.getElementById('toggle-dark-mode');
+
+        // Check for user preference in local storage
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+        }
+
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+
+            // Save user preference
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    </script>
+
+</body>
+</html>
 <body>
 
     <h1>Edexcel Math Notes</h1>
