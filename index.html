@@ -5,8 +5,8 @@
         var user = document.getElementById("username").value;
         var pass = document.getElementById("password").value;
 
-        var correctUser = "admin"; 
-        var correctPass = "1234";
+        var correctUser = "moha"; 
+        var correctPass = "1738";
 
         if (user === correctUser && pass === correctPass) {
             localStorage.setItem("loggedIn", "true"); // Save login state
@@ -44,16 +44,18 @@
 </div>
 <head>
     <style>
+    /* Make entire page dark */
     body {
-        background-color: #000000; /* Black background */
-        color: #ffffff; /* White text */
+        background-color: #121212 !important; /* Dark background */
+        color: #ffffff !important; /* White text */
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
     }
 
+    /* Style links */
     a {
-        color: #1e90ff;
+        color: #1e90ff !important;
         text-decoration: none;
     }
 
@@ -61,20 +63,22 @@
         text-decoration: underline;
     }
 
+    /* Main container */
     .container {
-        max-width: 800px;
+        max-width: 900px;
         margin: auto;
         padding: 20px;
-        background-color: #121212; /* Dark background for content */
+        background-color: #1a1a1a !important; /* Darker box */
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     }
 
+    /* Buttons */
     .button {
         display: inline-block;
-        padding: 10px 20px;
-        background-color: #1e90ff;
-        color: white;
+        padding: 12px 25px;
+        background-color: #007bff;
+        color: white !important;
         text-align: center;
         border-radius: 5px;
         margin-top: 10px;
@@ -83,7 +87,7 @@
     }
 
     .button:hover {
-        background-color: #0b5ed7;
+        background-color: #0056b3;
     }
 </style>
     <meta charset="UTF-8">
