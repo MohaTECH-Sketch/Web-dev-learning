@@ -55,86 +55,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Study Dashboard</title>
-    <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-   <!DOCTYPE html>
-<html lang="en">
-<head>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Dashboard</title>
+    
     <style>
-        /* Default Light Mode Styles */
+        /* Default Light Mode */
         body {
-            background-color: white;
-            color: black;
+            background-color: #ffffff;
+            color: #000000;
             font-family: Arial, sans-serif;
-            text-align: center;
-            transition: background 0.3s, color 0.3s;
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        h1 {
-            color: black; /* Ensure title is visible in light mode */
-            transition: color 0.3s;
+        /* Dark Mode */
+        body.dark-mode {
+            background-color: #121212;
+            color: #ffffff;
         }
 
-        .box {
-            background-color: #f0f0f0;
-            color: black;
+        /* Dashboard Styling */
+        .dashboard {
             padding: 20px;
-            border-radius: 8px;
             margin: 20px auto;
-            width: 50%;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-            transition: background 0.3s, color 0.3s;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #f4f4f4;
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        button {
+        /* Dark Mode for Dashboard */
+        .dark-mode .dashboard {
+            background-color: #1e1e1e;
+            color: #ffffff;
+        }
+
+        /* Toggle Button */
+        .toggle-button {
             padding: 10px 20px;
+            margin: 10px;
             border: none;
-            background-color: #007bff;
-            color: white;
             cursor: pointer;
-            font-size: 16px;
-            margin-top: 10px;
+            background-color: #007BFF;
+            color: white;
             border-radius: 5px;
+            font-size: 16px;
             transition: background 0.3s;
         }
 
-        button:hover {
+        .toggle-button:hover {
             background-color: #0056b3;
-        }
-
-        /* Dark Mode Styles */
-        body.dark-mode {
-            background-color: black;
-            color: white;
-        }
-
-        .dark-mode h1 {
-            color: white; /* Ensure title is visible in dark mode */
-        }
-
-        .dark-mode .box {
-            background-color: #222;
-            color: white;
         }
     </style>
 </head>
 <body>
 
-    <h1>My Study Dashboard</h1>
-    
-    <div class="box">
-        <p>Welcome to My Study Dashboard!</p>
+    <button class="toggle-button" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+    <div class="dashboard">
+        <h1>Study Dashboard</h1>
+        <p>Welcome to your study dashboard. Here, you can find all your study materials, quizzes, and resources.</p>
     </div>
 
-    <button onclick="toggleTheme()">Toggle Dark Mode</button>
-
     <script>
-        function toggleTheme() {
-            document.body.classList.toggle('dark-mode');
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+            localStorage.setItem("darkMode", document.body.classList.contains("dark-mode") ? "enabled" : "disabled");
+        }
+
+        // Check and apply dark mode if previously enabled
+        if (localStorage.getItem("darkMode") === "enabled") {
+            document.body.classList.add("dark-mode");
         }
     </script>
 
